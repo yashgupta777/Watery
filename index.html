@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Water Game</title>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<script src="js/jquery-1.12.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+.header{
+	background-color: #2F3A4C;
+	height: 60px;
+	
+}
+.outer{
+	padding: 0px;
+}
+.header ul{
+	list-style: none;
+	margin-bottom: 0px;
+}
+.header ul li{
+	color: white;
+    font-size: 20px;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    line-height: 2;
+}
+.header a{
+	text-decoration: none;
+}
+.dashboard{
+	    background: #F88A18;
+    height: 60px;
+}
+.header ul li i{
+	color: white;
+}
+.noti_bubble {
+	top: 10px;
+    position: absolute;
+    padding: 0;
+    background-color: #39CDEE;
+    color: #fff;
+    font-weight: 700;
+    font-size: .7em;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    right: 0px;
+}
+.noti_bubblesec {
+	top: 10px;
+    position: absolute;
+    padding: 0;
+    background-color: #DD4B39;
+    color: #fff;
+    font-weight: 700;
+    font-size: .7em;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    line-height: 20px;
+    text-align: center;
+    right: 0px;
+}
+.profile{
+	color: white;
+}
+.mainbody{
+	    float: left;
+    width: 100%;
+    margin-top: -40px;
+    padding: 0;
+}
+.nav-tabs{
+	border-bottom: none;
+	    padding-left: 5%;
+    font-size: 18px;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+	border: none;
+	border-bottom: 4px solid #F88A18;
+	color: #F88A18;
+}
+.tap-pump{
+	background: #EAEDF1;
+}
+.redbubble{
+    margin-left: 88%;
+    margin-top: -52%;
+    background: white;
+    padding: 3%;
+    border: 5px solid red;
+    border-radius: 289px;
+}
+.greenbubble{
+            margin-left: 30%;
+    margin-top: -30%;
+    background: white;
+    padding: 3%;
+    border: 5px solid #26C8A7;
+    border-radius: 289px;
+    margin-right: 58%;
+}
+.yellowbubble{
+	        margin-left: 88%;
+    margin-top: -25%;
+    background: white;
+    padding: 3%;
+    border: 5px solid #9ACB3C;
+    border-radius: 289px;
+}
+.redtag{
+	    margin-left: 90%;
+    margin-top: 2%;
+}
+.yellowtag{
+	    margin-left: 86%;
+}
+.greentag{
+	margin-left: 30%;
+}
+.content-body{
+	background: white;
+	padding: 5%;
+	margin-top: 30px;
+	margin-right: 15%;
+		
+}
+.greenbubble1{
+    margin-left: 34%;
+    margin-top: -48%;
+    background: white;
+    padding: 3%;
+    border: 5px solid #26C8A7;
+    border-radius: 289px;
+    margin-right: 54%;
+}
+.greenbubble2{
+    margin-left: 30%;
+    margin-top: -18%;
+    background: white;
+    padding: 3%;
+    border: 5px solid #9acb3c;
+    border-radius: 289px;
+    margin-right: 58%;
+}
+.text span{
+	color: #65DCEE;
+}
+.text1 {
+	color:  #65DCEE;
+} 
+.nav-tabs>li>a{
+	color: black;
+
+}
+.redbubble1 {
+    margin-left: 88%;
+    margin-top: -32%;
+    background: white;
+    padding: 3%;
+    border: 5px solid red;
+    border-radius: 289px;
+}
+.content-body form span{
+	margin-left: 5%;
+}
+</style>
+
+<body>
+	<div class="container-fluid outer">
+		<div class="container-fluid header">
+			<div class="col-md-2">
+					<img src="images/Logo.png" style="padding-top:15px;">
+				</div>
+				<div class="col-md-6">
+				<div class="col-md-12">
+					<ul>
+						<a href=""><li class="dashboard">Dashboard</li></a>
+						<a href=""><li>Water Game</li></a>
+						<a href=""><li>Tips</li></a>
+						<a href=""><li>Rewards</li></a>
+						<a href=""><li>Leaderboard</li></a>									
+					</ul>
+				</div>
+					
+				</div>
+				<div class="col-md-1">
+					<ul>
+						<li>
+							<i class="fa fa-envelope-o" aria-hidden="true"></i>
+							<div class="noti_bubble">11</div>
+						</li>
+						<li style="top: -60px;    right: -50px;">
+							<i class="fa fa-bell" aria-hidden="true"></i>
+							<div class="noti_bubblesec">8</div>
+						</li>					
+					</ul>
+				</div>
+				<div class="profile col-md-3">
+					<ul>
+						<li><h4>Fang Chao</h4></li>
+						<li><i class="fa fa-angle-down" aria-hidden="true"></i></li>
+						<li><img src="images/winner2.png"></li>
+					</ul>
+						
+				</div>
+		</div>
+		<div class="container-fluid mainbody">
+			<div>
+
+				  <!-- Nav tabs -->
+				  <ul class="nav nav-tabs" role="tablist">
+				    <li role="presentation" class="active"><a href="#daily" aria-controls="daily" role="tab" data-toggle="tab">Daily</a></li>
+				    <li role="presentation"><a href="#weekly" aria-controls="weekly" role="tab" data-toggle="tab">Weekly</a></li>
+				    <li role="presentation"><a href="#monthly" aria-controls="monthly" role="tab" data-toggle="tab">Monthly</a></li>
+				    
+				  </ul>
+
+				  <!-- Tab panes -->
+				  <div class="tab-content">
+				    <div role="tabpanel" class="tab-pane active" id="daily">
+				    	<div class="col-md-8 tap-pump">
+				    		<img src="images/tap-pump.png" style="margin-left: 10%;    margin-top: 5%;">
+				    		<img src="images/bucket.png" style="margin-left:50%;">
+				    		<img src="images/round1.png" style="    margin-left: 52%;    margin-top: -32%;">
+				    		<img src="images/round.png" style="    margin-left: 52%;    margin-top: -27%;">
+				    		<div>
+					    		<img src="images/red-line.png" style="    margin-left: 54%;    margin-top: -75%;">
+					    		<h4 class="redbubble">2100 Loreum</h4>	
+					    		<h4 class="redtag">Daily Base Value</h4>
+					    	</div>
+				    		<div>
+					    		<img src="images/green.png" style="    margin-left: 40%;    margin-top: -60%;">
+					    		<h4 class="greenbubble">1900 Loreum</h4>	
+					    		<h4 class="greentag">Daily Average</h4>
+					    	</div>
+				    		<div>
+					    		<img src="images/yellow.png" style="      margin-left: 53%;    margin-top: -51%;">
+					    		<h4 class="yellowbubble">1100 Loreum</h4>
+					    		<h4 class="yellowtag">Yesterday Use</h4>	
+					    	</div>				    	
+				    	</div>
+				    	<div class="col-md-4" style="background:#EAEDF1; height: 720px;">
+					    	<div class="content-body">
+					    		<h3 class="texthead">Congratulations</h3>
+					    		
+					    		<h4 class="text"> Cosby sweater eu banh mi, <span> terry</span> qui irure richardson ex squid. </h4>
+					    		<h4 class="text1"> Cosby sweater eu banh mi, qui irure terry richardson ex squid.</h4>
+					    	</div>				
+				    	</div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="weekly">
+				    	<div class="col-md-8 tap-pump">
+				    		<img src="images/tap-pump.png" style="margin-left: 10%;    margin-top: 5%;">
+				    		<img src="images/bucket.png" style="margin-left:50%;">
+				    		<img src="images/round1.png" style="    margin-left: 52%;    margin-top: -32%;">
+				    		<img src="images/round.png" style="    margin-left: 52%;    margin-top: -27%;">
+				    		<div>
+					    		<img src="images/red.png" style="    margin-left: 54%;    margin-top: -65%;">
+					    		<h4 class="redbubble1">15000 Loreum</h4>	
+					    		<h4 class="redtag">Weekly Base Value</h4>
+					    	</div>
+				    		<div>
+					    		<img src="images/egreen.png" style="    margin-left: 45%;    margin-top: -75%;">
+					    		<h4 class="greenbubble1">12000 Loreum</h4>	
+					    		<h4 class="greentag">Weekly Average</h4>
+					    	</div>
+				    		<div>
+					    		<img src="images/green.png" style="    margin-left: 40%;    margin-top: -40%;">
+					    		<h4 class="greenbubble2">1100 Loreum</h4>	
+					    		<h4 class="greentag">Current Weekly Use</h4>
+					    	</div>				    					    	
+				    	</div>
+				    	<div class="col-md-4" style="background:#EAEDF1; height: 720px;">
+					    	<div class="content-body">
+					    		<h3 class="texthead">Join Challenge</h3>
+					    		<h4 class="text"> Set Goal</h4>
+					    		<form action="">
+								  <input type="radio"> 5% <span>(300 points)</span><br>
+								  <input type="radio"> 10% <span>(700 points)</span><br>
+								  <input type="radio"> 15% <span>(1200 points)</span>
+								</form>
+					    	</div>				
+				    	</div>
+				    </div>
+				    <div role="tabpanel" class="tab-pane" id="monthly">
+				    	<div class="col-md-8 tap-pump">
+				    		<img src="images/tap-pump.png" style="margin-left: 10%;    margin-top: 5%;">
+				    		<img src="images/bucket.png" style="margin-left:50%;">
+				    		<img src="images/round1.png" style="    margin-left: 52%;    margin-top: -32%;">
+				    		<img src="images/round.png" style="    margin-left: 52%;    margin-top: -27%;">
+				    		<div>
+					    		<img src="images/red.png" style="    margin-left: 54%;    margin-top: -65%;">
+					    		<h4 class="redbubble1">15000 Loreum</h4>	
+					    		<h4 class="redtag">Weekly Base Value</h4>
+					    	</div>
+				    		<div>
+					    		<img src="images/egreen.png" style="    margin-left: 45%;    margin-top: -75%;">
+					    		<h4 class="greenbubble1">12000 Loreum</h4>	
+					    		<h4 class="greentag">Weekly Average</h4>
+					    	</div>
+				    		<div>
+					    		<img src="images/green.png" style="    margin-left: 40%;    margin-top: -40%;">
+					    		<h4 class="greenbubble2">1100 Loreum</h4>	
+					    		<h4 class="greentag">Current Weekly Use</h4>
+					    	</div>				    					    	
+				    	</div>
+				    	<div class="col-md-4" style="background:#EAEDF1; height: 720px;">
+					    	<div class="content-body">
+					    		<h3 class="texthead">Same as weekly because there is no psd for monthly</h3>
+					    		<h4 class="text"> Set Goal</h4>
+					    		<form action="">
+								  <input type="radio"> 5% <span>(300 points)</span><br>
+								  <input type="radio"> 10% <span>(700 points)</span><br>
+								  <input type="radio"> 15% <span>(1200 points)</span>
+								</form>
+					    	</div>				
+				    	</div>
+				    </div>
+				    
+				  </div>
+
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+	$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+</html>
